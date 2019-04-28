@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ArticleItemComponent } from './article-list/article-item/article-item.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopMenuComponent,
     ArticleListComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ArticleItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
