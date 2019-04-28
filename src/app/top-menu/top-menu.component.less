@@ -1,0 +1,68 @@
+@import '../../styles/media.less';
+
+.top-menu {
+    background-color: rgba(26, 119, 211, 1);
+    height: 260px;
+} 
+
+.top-content {
+    background-color: rgba(26, 119, 211, 1);
+    height: 40px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -40px;
+}
+
+.center-vertical {
+    top:30%;
+}
+
+.right {
+    text-align: right;
+}
+
+.icon {
+    max-height:150px;
+
+    @media (max-width: @screen-xs) {
+        max-height: 90px;
+    }
+    
+    @media (max-width: @screen-sm) {
+        max-height: 120px;
+    }
+}
+
+.btn {
+    color: white;
+    border-color: white;
+    opacity: 0.8;
+    margin-right: 5px;
+}
+
+.move-left {
+    padding-left: -10%;
+}
+
+.title-top {
+    color: white;
+    font-weight: bold;
+    font-size: 34px;
+    
+    @media (max-width: @screen-xs) {
+        font-size: 20px;
+    }
+    
+    @media (max-width: @screen-sm) {
+        font-size: 24px;
+    }
+}
+
+.title-bottom {
+    color: white;
+    opacity: 0.9;
+}
