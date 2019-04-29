@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
+import { Router } from '@angular/router';
 
 
 
@@ -10,9 +11,13 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class ArticleItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onArticleClick() {
+    this.router.navigate(['article']);
   }
 
 }

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~highlight.js/styles/github.css';
+
 html, body { height: 100%; }
 body { 
     margin: 0; 
@@ -16,4 +18,23 @@ body {
     align-items: center;
     justify-content: flex-end;
     margin-top: -40px;
+}
+
+.article-break {
+    margin-top: 30px;
+}
+
+.article-tab {
+    width: 40px;
+    display: inline-flex;
+}
+
+pre {
+    line-height: 1.2 !important;
+}
+
+code {
+    max-height: 400px;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
 }
