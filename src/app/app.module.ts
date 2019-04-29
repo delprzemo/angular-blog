@@ -17,6 +17,8 @@ import { HighlightModule } from 'ngx-highlightjs';
 import xml from 'highlight.js/lib/languages/xml';
 import scss from 'highlight.js/lib/languages/scss';
 import typescript from 'highlight.js/lib/languages/typescript';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ArticleService } from 'src/articles/article.service';
 
 export function hljsLanguages() { 
   return [
@@ -50,11 +52,12 @@ export function hljsLanguages() {
     MatCardModule,
     MatDividerModule,
     MatChipsModule,
+    InfiniteScrollModule,
     HighlightModule.forRoot({
       languages: hljsLanguages
     })
   ],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

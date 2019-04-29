@@ -28,6 +28,7 @@
     "highlight.js": "^9.15.6",
     "ngx-bootstrap": "^4.1.1",
     "ngx-highlightjs": "^3.0.3",
+    "ngx-infinite-scroll": "^7.1.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
