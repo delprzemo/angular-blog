@@ -1,0 +1,7 @@
+
+<div hidden="true" #rawContent>
+    <ng-content></ng-content>
+</div>
+
+<pre *ngIf="this.content !== undefined"><code class="language-{{language}}" [highlight] ="this.content">
+</code></pre>

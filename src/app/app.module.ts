@@ -19,6 +19,7 @@ import scss from 'highlight.js/lib/languages/scss';
 import typescript from 'highlight.js/lib/languages/typescript';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ArticleService } from 'src/articles/article.service';
+import { CodeAreaComponent } from './code-area/code-area.component';
 
 export function hljsLanguages() { 
   return [
@@ -37,7 +38,8 @@ export function hljsLanguages() {
     AboutMeComponent,
     ArticleItemComponent,
     FooterComponent,
-    ArticleComponent
+    ArticleComponent,
+    CodeAreaComponent
   ],
   imports: [
     BrowserModule,
