@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ArticleComponent } from './article/article.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ArticleService } from 'src/articles/article.service';
+import { HighlightJsModule } from 'ngx-highlight-js';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ArticleService } from 'src/articles/article.service';
     MatCardModule,
     MatDividerModule,
     MatChipsModule,
-    InfiniteScrollModule 
+    InfiniteScrollModule,
+    HighlightJsModule
   ],
   providers: [ArticleService], 
   bootstrap: [AppComponent]
