@@ -13,22 +13,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ArticleItemComponent } from './article-list/article-item/article-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArticleComponent } from './article/article.component';
-import { HighlightModule } from 'ngx-highlightjs';
-import xml from 'highlight.js/lib/languages/xml';
-import scss from 'highlight.js/lib/languages/scss';
-import typescript from 'highlight.js/lib/languages/typescript';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ArticleService } from 'src/articles/article.service';
-import { CodeAreaComponent } from './code-area/code-area.component';
-
-export function hljsLanguages() { 
-  return [
-    {name: 'typescript', func: typescript},
-    {name: 'scss', func: scss},
-    {name: 'xml', func: xml},
-    {name: 'html', func: xml}
-  ];
-}
 
 @NgModule({
   declarations: [
@@ -38,8 +24,7 @@ export function hljsLanguages() {
     AboutMeComponent,
     ArticleItemComponent,
     FooterComponent,
-    ArticleComponent,
-    CodeAreaComponent
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -54,12 +39,9 @@ export function hljsLanguages() {
     MatCardModule,
     MatDividerModule,
     MatChipsModule,
-    InfiniteScrollModule,
-    HighlightModule.forRoot({
-      languages: hljsLanguages
-    })
+    InfiniteScrollModule 
   ],
-  providers: [ArticleService],
+  providers: [ArticleService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
