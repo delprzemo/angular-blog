@@ -28,7 +28,11 @@ export class ArticleListComponent implements OnInit {
 
   onScrollDown() {
     this.throttle = this.throttle + 10;
-    this.articles = this.articleService.getArticlesThrottle(this.throttle);
+    if(this.searchText) {
+      this.articles = this.articleService.getArticlesByText(this.searchText, this.throttle);
+    } else {
+      this.articles = this.articleService.getArticlesThrottle(this.throttle);
+    }
   }
 
 }
