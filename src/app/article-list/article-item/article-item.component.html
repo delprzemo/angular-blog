@@ -1,15 +1,36 @@
 <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{article.title}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="getImage(article)">
+    <div class="date-field">
+        <span class="date">{{article.date | date: 'longDate'}}</span>
+    </div>
+    <div class="header">
+      {{article.title}}
+    </div>
+
+
+    <div class="img-container">
+        <img mat-card-image [src]="getImage(article)">
+        <div class="top-left ">
+            <div class="chips">
+                <mat-chip-list>
+                    <mat-chip *ngFor="let item of article.tags">{{item}}</mat-chip>
+                </mat-chip-list>
+            </div>
+        </div>
+    </div>
+
     <mat-card-content>
       <p>
         {{article.shortText}}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="onArticleClick()">SHOW MORE</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"><button mat-button (click)="onArticleClick()">SHOW MORE</button></div>
+          <div class="col-md-8">
+   
+          </div>
+        </div>
+      </div>
     </mat-card-actions>
   </mat-card>
