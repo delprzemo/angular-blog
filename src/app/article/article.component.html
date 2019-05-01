@@ -8,24 +8,20 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-12">
-                  <span class="date">{{getSampleDate() | date: 'longDate'}}</span>
+                  <span class="date">{{article.date | date: 'longDate'}}</span>
                 </div>
                 <div class="col-md-12">
-                  <h1>Lorem ipsum dolor</h1>
+                  <h1>{{article.title}}</h1>
                 </div>
                 <div class="col-md-12">
                   <mat-chip-list>
-                    <mat-chip>Angular</mat-chip>
-                    <mat-chip>TypeScript</mat-chip>
-                    <mat-chip>Security</mat-chip>
+                    <mat-chip *ngFor="let item of article.tags">{{item}}</mat-chip>
                   </mat-chip-list>
                 </div>
               </div>
               <div class="row image-area">
-                <div class="col-md-6"><img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="..."
-                    class="img-thumbnail"></div>
-                <div class="col-md-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non elit
-                  neque. Orci varius</div>
+                <div class="col-md-6"><img [src]="article.imageUrl" alt="..." class="img-thumbnail"></div>
+                <div class="col-md-6"> {{article.shortText}}</div>
               </div>
             </div>
           </div>

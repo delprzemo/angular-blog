@@ -8,7 +8,7 @@ const routes: Routes = [
     { path: '', component: ArticleListComponent},
     { path: 'blog', component: ArticleListComponent},
     { path: 'about', component: AboutMeComponent},
-    { path: 'article', component: ArticleComponent}
+    { path: 'article/:id', component: ArticleComponent}
   ];
   
 

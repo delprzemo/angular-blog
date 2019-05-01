@@ -1,35 +1,31 @@
-import { Component, OnInit, ViewChild, ElementRef, Injector, TemplateRef, AfterContentInit, AfterViewInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import {createCustomElement} from '@angular/elements'
-import { ShowCodeComponent } from '../show-code/show-code.component';
+
+
+import { ArticleService, Article } from 'src/articles/article.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.less']
 })
-export class ArticleComponent implements OnInit, AfterViewInit {
+export class ArticleComponent implements OnInit {
   content: SafeHtml;
+  article: Article;
 
-  constructor(private http: HttpClient, injector: Injector, domSanitizer: DomSanitizer) {
-    this.http.get('articles/html/article1.html', { responseType: 'text' }).subscribe(data => {
-      const ShowCodeElement = createCustomElement(ShowCodeComponent, {injector: injector});
-      customElements.define('app-show-code', ShowCodeElement);
+  constructor(private http: HttpClient, domSanitizer: DomSanitizer,
+    private articleService: ArticleService, private route: ActivatedRoute) {
+    let id = this.route.snapshot.paramMap.get("id");
+    this.article = this.articleService.getArticleById(id);
+    this.http.get('articles/html/' + this.article.html, { responseType: 'text' }).subscribe(data => {
       this.content = domSanitizer.bypassSecurityTrustHtml(data);
     })
-   }
+  }
 
   ngOnInit() {
 
-  }
-
-  ngAfterViewInit(): void {
-
-  }
-
-  getSampleDate() {
-    return new Date();
   }
 
 }

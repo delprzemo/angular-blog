@@ -16,7 +16,6 @@ export class ShowCodeComponent implements OnInit {
   ngOnInit() {
     if(!this.code.nativeElement.innerHTML 
         && this.codeHidden.nativeElement.innerHTML.indexOf('_ngcontent') < 0) {
-        console.log(this.codeHidden.nativeElement.innerHTML)
         this.code.nativeElement.innerHTML =  this.codeHidden.nativeElement.innerHTML; 
     }                                        
   }

@@ -1,9 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
-import { Article } from 'src/articles/article.service';
-
-
+import { Article, ArticleService } from 'src/articles/article.service';
 
 @Component({
   selector: 'app-article-item',
@@ -13,13 +10,13 @@ import { Article } from 'src/articles/article.service';
 export class ArticleItemComponent implements OnInit {
   @Input() article: Article;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private articleService: ArticleService) { }
 
   ngOnInit() {
   }
 
   onArticleClick() {
-    this.router.navigate(['article']);
+    this.router.navigate(['article', this.article.id]);
   }
 
   getImage(article: Article): string {

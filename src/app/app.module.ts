@@ -18,6 +18,7 @@ import { ArticleService } from 'src/articles/article.service';
 import { HighlightJsModule } from 'ngx-highlight-js';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowCodeComponent } from './show-code/show-code.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ShowCodeComponent } from './show-code/show-code.component';
     MatChipsModule,
     InfiniteScrollModule,
     HighlightJsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrderModule
   ],
   providers: [ArticleService], 
   bootstrap: [AppComponent],
