@@ -27,6 +27,7 @@ export class ArticleListComponent implements OnInit {
   }
 
   onScrollDown() {
+    if(this.articles.length < this.throttle) return;
     this.throttle = this.throttle + 10;
     if(this.searchText) {
       this.articles = this.articleService.getArticlesByText(this.searchText, this.throttle);
