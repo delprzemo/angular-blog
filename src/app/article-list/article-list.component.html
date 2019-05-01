@@ -1,3 +1,9 @@
+<form class="search-form" (submit)="findArticleByText()">
+    <mat-form-field class="search-input"> 
+      <input type="text" matInput placeholder="Search article" name="search" [(ngModel)]="searchText"> 
+    </mat-form-field>
+  </form>
+
 <div class="search-results"
       infinite-scroll
       [infiniteScrollDistance]="scrollDistance"

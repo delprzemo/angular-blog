@@ -19,6 +19,18 @@ export class ArticleService {
         return this.getArticles().find(x=>x.id == id);
     }
 
+    getArticlesByTag(tag: string) {
+        return this.getArticles().filter(x=>
+            x.tags.some(x=>x.toLowerCase().indexOf(tag.toLowerCase()) > -1))
+    }
+
+    getArticlesByText(text: string) {
+        return this.getArticles().filter(x=>
+            x.title.toLowerCase().indexOf(text.toLowerCase()) > -1
+            || x.shortText.toLowerCase().indexOf(text.toLowerCase()) > -1
+            || x.tags.some(x=>x.toLowerCase().indexOf(text.toLowerCase()) > -1))
+    }
+
     getArticles(): Array<Article>{
         return [
             {

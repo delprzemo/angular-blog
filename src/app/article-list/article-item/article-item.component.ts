@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { Article, ArticleService } from 'src/articles/article.service';
 
@@ -10,7 +10,7 @@ import { Article, ArticleService } from 'src/articles/article.service';
 export class ArticleItemComponent implements OnInit {
   @Input() article: Article;
 
-  constructor(private router: Router, private articleService: ArticleService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

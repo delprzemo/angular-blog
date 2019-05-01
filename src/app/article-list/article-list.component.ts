@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService, Article } from 'src/articles/article.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-article-list',
@@ -10,17 +11,22 @@ export class ArticleListComponent implements OnInit {
   throttle = 10;
   scrollDistance = 1;
   scrollUpDistance = 2;
+  searchText: string;
   articles: Array<Article>;
 
   constructor(private articleService: ArticleService) {
     this.articles = this.articleService.getArticles();
-   }
+  }
+
+  findArticleByText() {
+    this.articles = this.articleService.getArticlesByText(this.searchText);
+  }
 
   ngOnInit() {
   }
 
   onScrollDown() {
-    
+
   }
 
 }

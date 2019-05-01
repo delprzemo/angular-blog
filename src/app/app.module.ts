@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, 
-  MatListModule, MatCardModule, MatDividerModule, MatChipsModule } from '@angular/material';
+  MatListModule, MatCardModule, MatDividerModule, MatChipsModule, MatInputModule } from '@angular/material';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShowCodeComponent } from './show-code/show-code.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     InfiniteScrollModule,
     HighlightJsModule,
     HttpClientModule,
-    OrderModule
+    OrderModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule
   ],
   providers: [ArticleService, {provide: LocationStrategy, useClass: HashLocationStrategy}], 
   bootstrap: [AppComponent],
