@@ -35,18 +35,22 @@ export class ArticleService {
         return [
             {
                 id: 1,
-                title: 'My first article which will contain longer title',
-                shortText: ' The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.',
+                title: 'Blog created by developer for developers',
+                shortText: `Simple, customizable, fast, modern content in html, configuration in json - 
+                finally developers have blog base that is meeting their requirements. 
+                Time to look into Easy Blog`,
                 date: new Date(2019, 5, 1),
                 html: "article1.html",
                 image: '/assets/blog-item.jpg',
                 imageUrl: '',
-                tags: ['Angular', 'Security', 'TypeScript']
+                tags: ['Blog', 'Open source']
             },
             {
                 id: 2,
                 title: 'Second sample article with TypeScript',
-                shortText: ' Typescript is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. That what TypeScript is.',
+                shortText: `Typescript is the smallest of the six original and distinct spitz breeds of 
+                dog from Japan. A small, agile dog that copes very well with mountainous terrain, 
+                the Shiba Inu was originally bred for hunting. That what TypeScript is.`,
                 date: new Date(2019, 4, 1),
                 html: "article1.html",
                 image: '',
@@ -56,7 +60,10 @@ export class ArticleService {
             {
                 id: 3,
                 title: 'Angular! Quo Vadis?',
-                shortText: 'What is Angular? I will tell you. The Shiba Angular is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.',
+                shortText: `What is Angular? I will tell you. The Shiba Angular is the smallest of the six 
+                original and distinct spitz breeds of dog from Japan. A small, 
+                agile dog that copes very well with mountainous terrain, the Shiba 
+                Inu was originally bred for hunting.`,
                 date: new Date(2019, 3, 1),
                 html: "article1.html",
                 image: '',
@@ -66,7 +73,9 @@ export class ArticleService {
             {
                 id: 4,
                 title: 'Feature of programmer. Light or dark?',
-                shortText: ' Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis suscipit magna. Sed aliquam nunc in est tempus posuere. Vestibulum at mauris tellus.',
+                shortText: `Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, 
+                finibus vel quam vitae, mattis suscipit magna. Sed aliquam nunc in est tempus posuere. 
+                Vestibulum at mauris tellus.`,
                 date: new Date(2019, 2, 11),
                 html: "article1.html",
                 image: '',
@@ -76,7 +85,9 @@ export class ArticleService {
             {
                 id: 5,
                 title: 'Remote work - like or not?',
-                shortText: ' The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.',
+                shortText: `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. 
+                A small, agile dog that copes very well with mountainous terrain, 
+                the Shiba Inu was originally bred for hunting.`,
                 date: new Date(2018, 5, 1),
                 html: "easy-blog.html",
                 image: '',
