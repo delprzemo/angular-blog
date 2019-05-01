@@ -1,3 +1,5 @@
+@import '../../styles/media.less';
+
 .article {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -12,12 +14,18 @@
     }
 
     .content {
-        margin-top: 45px;
+        margin-top: 45px; 
     }
 
     .image-area {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    h1 {
+        @media (max-width: @screen-sm) {
+            font-size: 20px
+        }
     }
 
 }
