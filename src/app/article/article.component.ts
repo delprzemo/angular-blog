@@ -28,4 +28,10 @@ export class ArticleComponent implements OnInit {
 
   }
 
+  getImage(): string {
+    if (this.article.image) return this.article.image;
+    if (this.article.imageUrl) return this.article.imageUrl;
+    return '';
+  }
+
 }
