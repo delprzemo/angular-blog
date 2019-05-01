@@ -15,18 +15,20 @@ export class ArticleListComponent implements OnInit {
   articles: Array<Article>;
 
   constructor(private articleService: ArticleService) {
-    this.articles = this.articleService.getArticles();
+    this.articles = this.articleService.getArticlesThrottle(this.throttle);
   }
 
   findArticleByText() {
-    this.articles = this.articleService.getArticlesByText(this.searchText);
+    this.throttle = 10;
+    this.articles = this.articleService.getArticlesByText(this.searchText, this.throttle);
   }
 
   ngOnInit() {
   }
 
   onScrollDown() {
-
+    this.throttle = this.throttle + 10;
+    this.articles = this.articleService.getArticlesThrottle(this.throttle);
   }
 
 }

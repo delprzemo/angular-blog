@@ -5,27 +5,31 @@
     Orci varius
     natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac
     ante
-    ipsum primis in faucibus. Maecenas ac est in purus vulputate maximus a bibendum diam. Maecenas lacinia,
-    nisi
-    vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
-    elit
-    in auctor. 
-
-<app-show-code [lang]="'typescript'">
+    ipsum primis in faucibus. 
+    
+    <app-show-code [lang]="'typescript'">
 @Input() lang: string;
 @ViewChild("codeHidden") codeHidden: ElementRef;
 @ViewChild("code") code: ElementRef;
 
 constructor() { }
-</app-show-code>
+        </app-show-code>
+        
+    <h2>Maecenas ac est in purus vulputate maximus a bibendum diam. </h2>Maecenas lacinia,
+    nisi
+    vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
+    elit
+    in auctor. 
+
+
 
 <app-show-code [lang]="css">
-    .test-class &#123;
-      margin-top: 20px;
-      left: 10%;
-      right: 10px;
-      top: 10%;
-    &#125;
+.test-class &#123;
+  margin-top: 20px;
+  left: 10%;
+  right: 10px;
+  top: 10%;
+&#125;
 </app-show-code>
     
     Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis
@@ -33,24 +37,25 @@ constructor() { }
   </div>
 
   <div class="article-break">
-    <span class="article-tab"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
+    <span class="article-tab"></span> <h2>Lorem ipsum dolor sit amet</h2>
+    
+    <br> consectetur adipiscing elit. Quisque non
     elit
     neque. Orci varius
     natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac
     ante
     ipsum primis in faucibus. Maecenas ac est in purus vulputate maximus a bibendum diam. Maecenas lacinia,
     nisi
-    vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
+    vitae vulputate sagittis, felis sapien <b>dignissim turpis</b>, ut euismod ipsum quam id sem. Proin malesuada at
     elit
     in auctor. 
     
     
-    <app-show-code [lang]="css">
-.test-class &#123;
-  margin-top: 20px;
-  left: 10%;
-  right: 10px;
-&#125;
+    <app-show-code [lang]="c-sharp">
+public int GetMyAge(string name) {
+  var result = this.context.getAgeByName(name);
+  return result;
+}
     </app-show-code>
 
 

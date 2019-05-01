@@ -1,25 +1,17 @@
 <form class="search-form" (submit)="findArticleByText()">
-    <mat-form-field class="search-input"> 
-      <input type="text" matInput placeholder="Search article" name="search" [(ngModel)]="searchText"> 
-    </mat-form-field>
-  </form>
+  <mat-form-field class="search-input">
+    <input type="text" matInput placeholder="Search article" name="search" [(ngModel)]="searchText">
+  </mat-form-field>
+</form>
 
-<div class="search-results"
-      infinite-scroll
-      [infiniteScrollDistance]="scrollDistance"
-      [infiniteScrollUpDistance]="scrollUpDistance"
-      [infiniteScrollThrottle]="throttle"
-      (scrolled)="onScrollDown()"
-    > 
+<div class="search-results" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
 
-      <div class="container-fluid">
-            <div class="row top-content"> 
-                <div class="col-md-4 item-top-space" *ngFor="let item of this.articles | orderBy:'date'">
-                  <app-article-item [article]="item"></app-article-item>
-                </div>
-            </div>
-        </div>
-
+  <div class="container-fluid">
+    <div class="row top-content">
+      <div class="col-md-4 item-top-space" *ngFor="let item of this.articles">
+        <app-article-item [article]="item"></app-article-item>
+      </div>
+    </div>
+  </div>
 </div>
-
-
