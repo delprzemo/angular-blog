@@ -19,6 +19,7 @@ import { HighlightJsModule } from 'ngx-highlight-js';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowCodeComponent } from './show-code/show-code.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { OrderModule } from 'ngx-order-pipe';
     HttpClientModule,
     OrderModule
   ],
-  providers: [ArticleService], 
+  providers: [ArticleService, {provide: LocationStrategy, useClass: HashLocationStrategy}], 
   bootstrap: [AppComponent],
   entryComponents: [ShowCodeComponent]
 })
