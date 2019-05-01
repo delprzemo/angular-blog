@@ -16,6 +16,8 @@ import { ArticleComponent } from './article/article.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ArticleService } from 'src/articles/article.service';
 import { HighlightJsModule } from 'ngx-highlight-js';
+import { HttpClientModule } from '@angular/common/http';
+import { ShowCodeComponent } from './show-code/show-code.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { HighlightJsModule } from 'ngx-highlight-js';
     AboutMeComponent,
     ArticleItemComponent,
     FooterComponent,
-    ArticleComponent
+    ArticleComponent,
+    ShowCodeComponent
   ],
   imports: [
     BrowserModule,
@@ -41,9 +44,11 @@ import { HighlightJsModule } from 'ngx-highlight-js';
     MatDividerModule,
     MatChipsModule,
     InfiniteScrollModule,
-    HighlightJsModule
+    HighlightJsModule,
+    HttpClientModule
   ],
   providers: [ArticleService], 
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ShowCodeComponent]
 })
 export class AppModule { }

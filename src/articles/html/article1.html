@@ -1,9 +1,7 @@
 <div>
     <span class="article-tab"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
     elit
-    neque.
-
-    <pre><code class="language-css">p  &#123; color: red &#125;</code></pre>
+    neque. 
     Orci varius
     natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac
     ante
@@ -11,23 +9,30 @@
     nisi
     vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
     elit
-    in auctor.
+    in auctor. 
 
-    <pre><code class="language-typescript">@Component(&#123;
-selector: 'app-root',
-templateUrl: './app.component.html',
-styleUrls: ['./app.component.less']
-&#125;
-export class AppComponent &#123;
-title = 'angular-blog';
-&#125;
-</code></pre>
+<app-show-code [lang]="'typescript'">
+@Input() lang: string;
+@ViewChild("codeHidden") codeHidden: ElementRef;
+@ViewChild("code") code: ElementRef;
 
+constructor() { }
+</app-show-code>
+
+<app-show-code [lang]="css">
+    .test-class &#123;
+      margin-top: 20px;
+      left: 10%;
+      right: 10px;
+      top: 10%;
+    &#125;
+</app-show-code>
+    
     Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis
     suscipit magna. Sed aliquam nunc in est tempus posuere. Vestibulum at mauris tellus. Fusce at lectus orci.
-</div>
+  </div>
 
-<div class="article-break">
+  <div class="article-break">
     <span class="article-tab"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
     elit
     neque. Orci varius
@@ -37,6 +42,18 @@ title = 'angular-blog';
     nisi
     vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
     elit
-    in auctor. Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis
+    in auctor. 
+    
+    
+    <app-show-code [lang]="css">
+.test-class &#123;
+  margin-top: 20px;
+  left: 10%;
+  right: 10px;
+&#125;
+    </app-show-code>
+
+
+                  Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis
     suscipit magna. Sed aliquam nunc in est tempus posuere. Vestibulum at mauris tellus. Fusce at lectus orci.
-</div>
+  </div>

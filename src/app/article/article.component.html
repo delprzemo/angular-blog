@@ -33,65 +33,7 @@
           <mat-divider></mat-divider>
 
           <div class="content">
-            <div>
-              <span class="article-tab"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
-              elit
-              neque. 
-
-              <textarea highlight-js [lang]="'javacript'">
-var myArr = [];
-myArr.push(2);
-              </textarea>
-
-              Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac
-              ante
-              ipsum primis in faucibus. Maecenas ac est in purus vulputate maximus a bibendum diam. Maecenas lacinia,
-              nisi
-              vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
-              elit
-              in auctor. 
-
-              
-              Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis
-              suscipit magna. Sed aliquam nunc in est tempus posuere. Vestibulum at mauris tellus. Fusce at lectus orci.
-            </div>
-
-            <textarea highlight-js [lang]="'typescript'">
-import { Component } from '@angular/core';
-
-@Component({
-    selector: 'demo',
-    templateUrl: './demo.component.html',
-    styleUrls: ['./demo.component.scss']
-})
-export class DemoComponent {
-    switchStatus: boolean = true;
-}
-              </textarea>
-
-            <div class="article-break">
-              <span class="article-tab"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non
-              elit
-              neque. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac
-              ante
-              ipsum primis in faucibus. Maecenas ac est in purus vulputate maximus a bibendum diam. Maecenas lacinia,
-              nisi
-              vitae vulputate sagittis, felis sapien dignissim turpis, ut euismod ipsum quam id sem. Proin malesuada at
-              elit
-              in auctor. 
-              
-              
-            <textarea highlight-js [lang]="'css'">
-.test-class {
-  margin-top: 20px;
-  left: 10%;
-}
-            </textarea>
-                            Ut lobortis justo faucibus suscipit facilisis. Sed tortor urna, finibus vel quam vitae, mattis
-              suscipit magna. Sed aliquam nunc in est tempus posuere. Vestibulum at mauris tellus. Fusce at lectus orci.
-            </div>
+              <div [innerHTML]="content"></div>
           </div>
         </mat-card>
       </div>
