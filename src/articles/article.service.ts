@@ -31,16 +31,16 @@ export class ArticleService {
         return this.getArticles().slice(0, take).sort( (a, b) => a.date < b.date ? 1 : -1 );
     }
 
-    getArticles(): Array<Article>{
+    getArticles(): Array<Article> {
         return [
             {
                 id: 1,
                 title: 'Blog created by developer for developers',
-                shortText: `Simple, customizable, fast, modern content in html, configuration in json - 
-                finally developers have blog base that is meeting their requirements. 
-                Time to look into Easy Blog`,
+                shortText: `Simple, customizable, fast, modern, configurable in json, articles in html - 
+                finally developers have blog template which is meeting their requirements. 
+                Time to look into Material Blog`,
                 date: new Date(2019, 5, 1),
-                html: "article1.html",
+                html: "easy-blog.html",
                 image: '/assets/blog-item.jpg',
                 imageUrl: '',
                 tags: ['Blog', 'Open source']

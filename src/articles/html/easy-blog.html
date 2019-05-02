@@ -1,3 +1,164 @@
-<div>
-    Easy blog test
-</div>
+ Material Blog is a modern blog template designed for developers. 
+The main goal was to create a blog that will be:
+<br>
+<br>
+<ul>
+    <li><b>Simple to use</b> - to start using it after 5 mins of introduction <br></li>
+    <li><b>Easy to customize</b> - only basic features included. Rest is up to the developer <br></li>
+    <li><b>Simple, clean, responsive interface</b> - focus on content, not on extra options <br></li>
+    <li><b>Free, open-source</b> - strength is in the community! <br></li>
+    <li><b>For IT content</b> - easily highlight code syntax <br></li>
+</ul>
+<br>
+
+
+<h2>How to start using it?</h2>
+Basically, a blog was written in Angular, but you don't need to know it 
+while managing your articles. Before we start adding new articles
+<b> we need to install it</b>
+
+<br>
+<br>
+
+<ol>
+    <li>
+        Firstly, install Angular CLI on your machine. Run this command:
+        <app-show-code [lang]="" style="color:white">
+            npm install -g @angular/cli
+        </app-show-code>
+
+        If you don't have NodeJs then you should install it first
+        <br><br>
+
+    </li>
+    <li>
+        Now clone repository
+        <app-show-code [lang]="" style="color:white">
+            git clone https://github.com/delprzemo/angular-blog.git
+        </app-show-code>
+        <br>
+    </li>
+    <li>
+        In a path where you've cloned repository install dependencies with a command
+        <app-show-code [lang]="'typescript'" style="color:white">
+            npm install
+        </app-show-code>
+        <br>
+    </li>
+    <li>
+        There is the last command for you - it will run your application
+        <app-show-code [lang]="'typescript'" style="color:white">
+            ng serve
+        </app-show-code>
+
+        and that's all! Now you can preview a blog by opening http://localhost:4200
+    </li>
+</ol>
+
+<br> <br>
+
+
+<h2>Add new article</h2>
+Articles are kept in HTML. If you are not familiar with HTML then you can use some
+online editor that will transform content into html.
+There are a lot of them. <br>
+So, in order to add a new article:
+<br><br>
+
+<ol>
+    <li>
+        Add html file in src/articles/html
+    </li>
+    <li>
+        Go to src/articles/article.service.ts and add article metadata to returned json. 
+        For instance, this is json for this article:
+
+        <app-show-code [lang]="" style="color:white">
+            return [
+            {
+            id: 1,
+            title: 'Blog created by developer for developers',
+            shortText: `Simple, customizable, fast, modern, configurable in json, articles in html -
+            finally developers have blog template which is meeting their requirements.
+            Time to look into Material Blog`,
+            date: new Date(2019, 5, 1),
+            html: "easy-blog.html",
+            image: '/assets/blog-item.jpg',
+            imageUrl: '',
+            tags: ['Blog', 'Open source']
+            },
+            ...
+        </app-show-code>
+
+        Again, that's it! Just create html file and fill json data. In cloned repo, there are few example 
+        articles (including this one).
+
+        <br><br>
+
+        <b>Tip 1:</b><br> while adding an image to article use 'image' property when you've 
+        downloaded image to assets folder or 'imageUrl'
+        when you have url to external image <br>
+        <b>Tip 2:</b><br> if you want to show code with highlighted syntax then use <b>app-show-code</b> component
+
+<app-show-code [lang]="'typescript'" style="color:white">
+‹app-show-code [lang]="'typescript'" style="color:white">
+    class MyCode() {
+        // example
+    }
+‹/app-show- code>
+</app-show-code>
+
+    </li>
+</ol>
+
+<br><br>
+<h2>Customize it</h2>
+Material Blog is a simple project containing only basic functionalities, so you can customize it according to your
+needs, add new functionalities or
+even integrate with another website.
+<br><br>
+Anyway, it would be nice to change something before publishing it - to make your readers distinguish it from other blogs :)
+There are few things that you can do:
+<br><br>
+<ol>
+    <li>
+        You can replace <b>top-menu-img.jpg</b> in <b>src/assets</b> with another photo
+    </li>
+    <li>
+        Change top menu text in <b>src/app/top-menu.component.html</b>
+    </li>
+    <li>
+        Have fun with styling top-menu (<b>src/app/top-menu.component.less</b>). <br>
+        For example change background color:
+
+<app-show-code [lang]="'css'" style="color:white">
+.container-fluid {
+    background-color: rgba(26, 119, 211, 1);
+}
+</app-show-code>
+        <br>
+        or opacity of it:
+
+<app-show-code [lang]="'css'" style="color:white">
+.top-img {
+    opacity: 0.05;
+}
+</app-show-code>
+
+        <br>
+        Now, it will be slightly different than other blogs :)
+    </li>
+</ol>
+
+
+<br><br>
+<h2>Make it public</h2>
+It's up to you how and where you will deploy your blog. 
+Because it is server-less then you need hosting just for static website.
+There are a lot of them. Personally, I can recommend <b>netlify.com/</b> where it is extremely easy 
+to configure CI/CD for a repository, especially when it is placed in github. 
+Now, when I want to add new article it is enough to push it into a repository
+and netlify will do rest of job:)
+<br><br>
+<h3>It is really worth to share your knowledge and experience with a world. 
+    Hope, that blog will make it easier and more fun. <b>Enjoy!</b></h3>
