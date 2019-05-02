@@ -73,22 +73,22 @@ So, in order to add a new article:
         Go to articles/article.service and add article metadata to returned json. 
         For instance, this is json for this article:
 
-        <app-show-code [lang]="" style="color:white">
-            return [
-            {
-            id: 1,
-            title: 'Blog created by developer for developers',
-            shortText: `Simple, customizable, fast, modern, configurable in json, articles in html -
-            finally developers have blog template which is meeting their requirements.
-            Time to look into Material Blog`,
-            date: new Date(2019, 5, 1),
-            html: "easy-blog.html",
-            image: '/assets/blog-item.jpg',
-            imageUrl: '',
-            tags: ['Blog', 'Open source']
-            },
-            ...
-        </app-show-code>
+<app-show-code [lang]="" style="color:white">
+return [
+    {
+        id: 1,
+        title: 'Blog created by developer for developers',
+        shortText: `Simple, customizable, fast, modern, configurable in json, articles in html -
+        finally developers have blog template which is meeting their requirements.
+        Time to look into Material Blog`,
+        date: new Date(2019, 5, 1),
+        html: "easy-blog.html",
+        image: '/assets/blog-item.jpg',
+        imageUrl: '',
+        tags: ['Blog', 'Open source']
+    },
+
+</app-show-code>
 
         Again, that's it! Just create html file and fill json data. In cloned repo, there are few example 
         articles (including this one).
