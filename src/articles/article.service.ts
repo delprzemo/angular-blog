@@ -54,7 +54,7 @@ export class ArticleService {
                 date: new Date(2019, 4, 1),
                 html: "article1.html",
                 image: '',
-                imageUrl: 'https://www.robertcooper.me/static/0cf501bada61bd930003ec6c08be25fa/75740/banner.png',
+                imageUrl: 'https://www.robertcooper.me/static/0cf501bada61bd930003ec6c08be25fa/46606/banner.png',
                 tags: ['TypeScript', 'Design patterns']
             },
             {
